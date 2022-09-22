@@ -1,0 +1,140 @@
+* Agenti Computazionali
+Argomento che interseca puttanai su puttanai
+
+Interseca il controllo autmoatico, del tutto sistematico
+
+Hai un agente, un programma intelligente, e hai un ambiente
+/Environment/ in cui è immerso, non fisico, molto astratto, questo
+oggetto comunica con l'ambiente attraverso qualcosa che impatta
+sull'ambiente, attraverso /azioni/ e qualcosa che viene ricevuta
+dall'ambiente, /percezioni/.
+
+L'agente è come se fosse una scatola nera
+Percezioni attraverso un "apparato sensoriale", o sensori (tipo bot) o
+getter() (tipo AI di un gioco).
+
+Agente riceve percezioni e deve compiere azioni
+
+
+** Esempio stupido
+Ho una macchina autonoma, l'input è la posizione da un GPS
+Metti che l'obbiettivo è raggiungere una certa destinazione
+
+Un modo per descrivere st'intelligenza è che l'agente è razionale, ha
+una funzioe obbiettivo, dentro questa funzione è definito anche un
+costo, in benzina consumata, tempo impiegato, come cazzo vuoi.
+L'agente è razionale laddove ottimizza questa funzione obbiettivo,
+puoi dire che l'agente A è più razionale dell'agente B se da valori
+maggiori della funzione obbiettivo
+
+*** Motivi per cui non siamo il tardella
+Il modello appena descritto è idealissimo, la basta trovare un cammino
+minimo, sparaci dykstra.
+
+Devo rispondere a imprevedibilità quali semafori, traffico, codice
+della strada, pedoni, condizioni della strada, la singolarità che
+spunta a porta al prato ogni tanto...
+
+L'ambiente non è deterministico, è anche per questo che dobbiamo
+parlare di probilità.
+Ci sono cose impossibili da prevedere (la singolartià di porta al
+prato) o che sono una rottura da prevedere (aggiorna la strada ogni
+giorno dappertutto su gmaps).
+
+Un altro problema è che all'agente serve capire che cazzo sta
+succedendo, alcuni sistemi non sono modellabili, spari a cazzo finchè
+non sai nuotare nel vuoto
+
+in tal caso la funzione obbiettivo è il valore atteso.
+
+**** Parentesi pipponica sul valore atteso
+Ripeto una misura tot volte, quanto è alta una sedia, ogni volta ho un
+valore un pochino diverso, il valore atteso è?
+La media ponderata delle misure, ponderata con la probabilità, quindi
+come cazzo faccio per l'AI? da dove cazzo mi pesco p(x)? devo
+ottimizzare questo valore atteso?
+Me la devo cercare.
+
+*** Continuo
+La maggior parte degli articoli che si trovano non saranno tanto
+/dimostro sto teorema/, non solo quello, ma ci sarà anche
+
+Questo coso funziona così e non cosà, vado di empirichese, questo
+funziona.
+Metodo e sperimentazione su casi di certo interesse, la performance su
+casi pratici, quest'algoritmo funziona meglio? Fammi vedere, arriva
+alla ciccia, fai partire stammerda di eseguibile e dammi un output
+pratico, coglione.
+
+L'AI è una scienza estremamente empirica \textsc{\small (cit.)}
+
+Immagina l'ambiente fermo immobile, puoi fare un /PLANNING/, se magari
+avessi la planimetria, l'ambiente è statico e posso permettermelo,
+potrebbe succedere che sposti il tavolo, e che cazzo? E se cambia di
+continuo? E che stracazzo.
+
+Allora hai bisogno di adattarti un pochino
+
+Hai una funzione agente che mappa sequenze di percezini-> sequenze di
+azioni. (anche singola a singola, ma è un caso particolare, con un
+caso particolare di sequenza).
+
+* Algoritmi di ricerca
+Cercare, robe sui grafi, boh.
+** Prima boh
+Hai descrizione con variabili continue e variabili discrete
+parecchie cose che si possono fare nel discreto non puoi farle nel
+continuo
+Georg Cantor, figo della madonna.
+Molti numeri reali non sono calcolabili perchè i numeri calcolabili
+sono un infinito enumerabile, \mathbb{R} col cazzo che lo è.
+** Ambienti Discreti
+Facciamo queste assunzioni, queste ipotesi, dobbiamo essere precisi su
+cosa si assume, su che ipotesi si fanno.
+Motivo pratico, se non ho chiaro che cosa serve a questa cosa, sta a
+vedere che la scazzo.
+- Discrite environment
+- (in)Finite set of states (se infinito -> di un infinito numerabile)
+- Ambiente osservabile
+  Osservabile, l'agente ha sempre accesso allo stato corrente
+  dell'ambiente
+- L'agente sa lo stato, sempre, è occluso come ambiente (ipotesi non
+  garantita, pensa l'auto che va da se e c'è una nebbia da S.King tra
+  un po', e sticazzi).
+- Deterministico, lo stato è prevedibile, la strada non è capaci, e le
+  azioni che compiono hanno l'effetto previsto, non si rompe il
+  freno.
+- Statico, non cambia nel tempo, voglio fare un piano, da quando parte
+  a quando arrivo a punto x del piano voglio che non sia cambiato il
+  piano, la casa è così, devo pulire una casa così, e resta così la
+  planimetria, facciamo.
+
+set di stati \mathbb{S}, hai uno stato iniziale s_0 \in \mathbb{S} e
+hai un GOAL \mathbb{G} \subset \mathbb{S} (non so come fare
+sottinsiemi il LaTeX)
+
+Le azioni A(s) sono qualcosa che dipendono dallo stato, l'agente può
+fare delle cose
+le azioni possibili nel caso di, facciamo un robot aspirapolvere,
+sono.
+ - Muoviti Nord
+ - Muoviti Sud
+ - Muoviti Est
+ - Muoviti Ovest
+ - Suca
+Lo scopo è produrre una sequenza di azioni che ci porta verso lo stato
+goal
+
+Quindi avrò una funzione di transizione, una funzione con uno stato e
+delle azioni che mi fa sapere a che stato arrivo.
+Definita questa so che mi serve una sequenza di azioni che in
+quell'affare mi da uno stato desiderato.
+
+il risultato di fare azione tot da stato tat
+R(S_{tot-1},azione) = S_{tot}
+
+e volgio che S_{T fine} \in \mathbb{G}
+*I'M AT THE PACMAN*
+Cambia lo stato, non camibia l'ambiente, il set degli stati e le regole da uno stato all'altro non cambiano
+* Compitos a Casos
+provia a riformulare pacman sulla base di questo modello robottino

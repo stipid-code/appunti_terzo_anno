@@ -1,0 +1,108 @@
+GOFAI
+Good Old Fashioned Ai[fn:: ma che cazzo ci fa fare McCarthy?]
+
+Ci sta argomenti che un pochino tocchiamo quali
+ - Cerca
+ - Vincoli
+ - Logica
+ - Ponte fievolino verso gli algoritmi di Machine Learning ->
+   probabilistic models.
+ - Machine Learning
+   
+
+I matematici tendono a dare per buona la logica ma non si formalizza
+Qui logica matematica formalizzata (*Principia Time Boiii*)
+
+Negli anni 50' avevi già Turing che faceva il Turing
+
+* Cose che non sono le modalità di esame
+** Ricerca
+AlphaGo (Dama e Scacchi battuti decenni fa), all'interno di cosi del
+genere ci trovi roba di ricerca
+
+** Vincoli
+Hai certi vincoli interdipendenze (GRAFIIIII) e devi ottimizzare
+stocazzo
+*GRAFIIIIIIIIIIIIIIIIIIIIII*
+
+** Logica
+Knowledge Graffs
+Molte intersezioni, per le logica, problemi di verifica di software e
+hardware, testare cosi, tecniche di testing per circuiti e sticazzi.
+
+** Dio benedica le GPU
+
+** Modelli Probabilistici
+Causa forze maggiori non possiamo dare un ambiente perfetto a
+un'intelligenza artificiale, almeno se vogliamo che sappia fare
+qualcosa in un ambiente (quale il nostro universo) che non abbia
+certezze di un cazzo.
+
+Legato abbastanza alla parte di vincoli
+
+** Machine learning
+Non arriviamo al deep learinig
+Vedremo com'è fatto un neural network
+
+Vedremo algoritmi che, per quanto non recentissimi, sono comunque
+buoni
+Problemi di machine learning sono ad esempio
+ - Mettere i sottotitoli a un video
+ - Capire se è un gatto
+ - Altre cose che sono facilissime per il sistema di percezioni umane,
+   ma che per un computer è /che cazzo?/
+ - *LA BORSAAAAAAAA*
+ - *LE PUBBLICITÀ E LE RACCOMANDAZIONI DEL CAZZO*
+   *VENDITI L'ANIMAAAAAA*
+
+Dai alla macchina tot di input e gli dici che tat è l'output, come ci
+arrivi? Cazzi tua capirla
+(Legato abbastanza alla statistica anche)
+
+* Modalità di esame
+Piccolo coso da fare a casa in autonomia, non potete scegliere
+esattamente cosa fare, ma potete scegliere il ramo
+
+Darà un problema risolto con le tecniche mostrate nel corso
+
+Magari anche scrivere un programma
+Oppure qualcosa meno programmosa più su un problema che magari è
+interessante, boh.
+
+La prova orale sarà una domanda su uno di sti metodi
+
+** Libri di testo consigliati
+- Russel and Norvig 2020
+  Artificiall Intelligence a Modern Approach (AIMA) (4^a edizione)
+  Libro molto usato, gli autori hanno avuto un puttanaio di feedback,
+  molto raffinato, molto figo, un po' costoso ma la cosa non è un mio
+  problema, facciamo i pirati.
+  Mette lui i capitoli da leggere, da leggere intende da studiare.
+  E articolini
+  È il Colombo
+- Un altro coso da scaricare
+
+* Le imitation game
+A fa una domanda B
+Non hai l'audio, è una chat
+Riceve risposte
+Un'osservatore deve capire, fai, chi è l'uomo e chi è la donna tra A e
+B
+
+Mettiamo che devo capire chi è l'uomo e chi è il *ROBOT*
+Se non riesco a capirlo, è intelligente
+
+* John McJoestar
+Colloca l'AI tra le discipline ingengeristiche
+La considera la capacità di creare macchine intelligenti
+
+Intelligenti che cazzo vuol dire
+Le cose per cui la gente usa AI non è propio intelligenza da umani
+Non è che dai a un'umano la storia della tua vita e quello prova a
+capire che pubblicità metterti.
+Si apre un vaso di pandora che boh, come cazzo lo definisci?
+
+Molte comunità/ gruppetti che fanno sta roba si mettono insieme e ne
+esce una macrocomunità con etichette e sticazzi e la chiami *AI*
+
+Definisci? E la gente impazzisce, diobono.
