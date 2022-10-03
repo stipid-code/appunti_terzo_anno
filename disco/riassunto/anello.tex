@@ -1,0 +1,98 @@
+% Created 2022-10-03 Mon 13:43
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.5.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Definzione}
+\label{sec:orgf982fa7}
+\subsubsection{Nota storica, perchè esiste questa cosa?}
+\label{sec:orgbda9592}
+L'anello è stato introdotto per fare da denominatore comune a bene o
+male ogni contesto in cui puoi fare somma e prodotto di qualcosa, cosa
+comunque abbastanza utile quando sei nel 1900 e la gente sta provando
+ad assiomatizzare e logicizzare ogni aspetto della matematica mai
+concepito da essere vivente.
+
+Quindi qualche decennio fa il genio di turno ha visto che c'erano
+parecchie cose in comune tra interi, matrici, reali, complessi,
+razionali e quant'altro, e ha deciso di definire questa \texttt{interface}
+comune.
+
+\subsection{Definzione a grandi linee}
+\label{sec:org6398d93}
+Un anello è un insieme per cui abbiamo definito le basi basi per
+poterci fare calcoli, in questo caso
+\begin{itemize}
+\item Una somma (la sottrazione fai la somma con i negativi)
+\item Un prodotto (la divisione fai il prodotto con l'inverso, se esiste)
+\item Uno \(0\) che si comporta da \(0\)
+(neutro per la somma e il prodotto fa \(0\))
+\item Un \(1\) che si comporta da \(1\) (neutro per il prodotto)
+\item Numeri positivi e negativi (i negativi servono per fare la sottrazione)
+\end{itemize}
+
+Per mettere un minimo di arrosto sotto a sto fumo prendiamo l'insieme
+degli interi \(\mathbb{Z}\), tutto quello che abbiamo fatto con gli
+interi e che sappiamo sugli interi ha come basi:
+\begin{itemize}
+\item Il fatto che lo \(0\) e l'\(1\) si comportano da \(0\) e \(1\)
+\item Il fatto che abbiamo una somma con certe proprietà
+\item Il fatto che abbiamo un prodotto con certe proprietà
+\item Il fatto che se abbiamo \(x\) allora abbiamo anche \(-x\) e ci possiamo
+fare le somme algebriche
+\end{itemize}
+
+\subsection{Definizione più rigorosa}
+\label{sec:org120c1fa}
+Un insieme
+\[(R,0,+,1,\cdot)\]
+è un anello quando
+\begin{itemize}
+\item \(0,1 \in R\)
+\item la somma \(+\) è un operatore binario
+\footnote{vuole dire solo che la somma è definita solo tra due elementi,
+tanto quando sommi si fa la somma si fa comunque tra 2 addendi alla
+volta, non cambia niente} 
+da \(R \times R\)
+\footnote{che ha in ingresso 2 elementi dell'anello}
+in \(R\) che
+\footnote{che ha come uscita un elemento dell'anello}
+\begin{itemize}
+\item è commutativo (\(a+b = b+a\) quando \(a,b \in R\))
+\item è associativo (\(a+(b+c) = (a+b)+c\) quando \(a,b,c \in R\))
+\end{itemize}
+\item il prodotto \(\cdot\) è un operaTore binario da \(R\times R\) in \(R\) che
+\begin{itemize}
+\item è associativo \footnote{la proprietà commutativa del prodotto non vale
+di default perchè altrimenti le matrici si arrabbiano, gli anelli
+per cui la moltiplicazione è commutativa
+(\( \mathbb{Z}, \mathbb{R}, \mathbb{C}, \mathbb{Q} \) \ldots{})
+si dicono \emph{anelli commutativi} e faremo bene o male solo queli}
+\end{itemize}
+\item \(0\) è l'elemento neutro della somma (\(a+0 = a \forall a \in R\))
+\item \(1\) è l'elemento neutro del prodotto
+(\(a \cdot 1 = a \forall a \in R\))
+\end{itemize}
+\end{document}

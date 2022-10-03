@@ -39,15 +39,18 @@ Un insieme
    [fn::vuole dire solo che la somma è definita solo tra due elementi,
    tanto quando sommi si fa la somma si fa comunque tra 2 addendi alla
    volta, non cambia niente] 
-   da $R\times R$[fn::che ha in ingresso 2 elementi dell'anello]
-   in $R$ che[fn::che ha come uscita un elemento dell'anello]
+   da $R \times R$
+   [fn::che ha in ingresso 2 elementi dell'anello]
+   in $R$ che
+   [fn::che ha come uscita un elemento dell'anello]
    - è commutativo ($a+b = b+a$ quando $a,b \in R$)
    - è associativo ($a+(b+c) = (a+b)+c$ quando $a,b,c \in R$)
- - il prodotto $\cdot$ è un operatore binario da $R\timesR$ in $R$ che
+ - il prodotto $\cdot$ è un operaTore binario da \( R\times R \) in $R$ che
    - è associativo [fn::la proprietà commutativa del prodotto non vale
      di default perchè altrimenti le matrici si arrabbiano, gli anelli
-     per cui la moltiplicazione è commutativa ($\mathbb{Z},
-     \mathbb{R}, \mathbb{C}, \mathbb{Q}...$) si dicono /anelli
+     per cui la moltiplicazione è commutativa (/(\mathbb{Z},
+     \mathbb{R}, \mathbb{C}, \mathbb{Q}.../)) si dicono /anelli
      commutativi/ e faremo bene o male solo quelli]
- - $0$ è l'elemento neutro della somma ($a+0 = a \forall a \in R)
- - $1$ è l'elemento neutro del prodotto ($a \cdot 1 = a \forall a \in R)
+ - $0$ è l'elemento neutro della somma ( $a+0 = a \forall a \in R$ )
+ - $1$ è l'elemento neutro del prodotto
+   ( $a \cdot 1 = a \forall a \in R$ )
