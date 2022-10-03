@@ -1,0 +1,8 @@
+qui è per file eliminati su git
+visto che ripristinarli in modo normale va oltre le mie competenze allora
+
+ 1. torna al commit dove li hai eliminati
+ 2. copiali qui
+ 3. torna a HEAD e mettici i file che avevi qui
+
+grazie della collaborazione

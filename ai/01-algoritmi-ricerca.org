@@ -1,0 +1,195 @@
+Actions(s) funzione che ritorma un set
+dato uno stato saranno disponibili un tot di azioni all'agente
+
+Result(a,s) risultatao di applicare azione a allo stato s
+queste due implicitamente definiscono un grafo
+
+* Grafo di ricerca
+i nodi sono gli stati e gli archi sono le coppie
+(s, Result(a,s)) con s \in \mathbb{S} e a \in Actions(s)
+
+questo grafo diventa grosso in modo anche esponenziale
+il grafo non è detto che stia in memoria
+
+poi il grafo potrebbe anche essere infinito, quindi auguroni
+
+il grafo qui è implicito, non lo metterai mai in memoria, qualcosa di
+sto grafo finirà in memoria, ma non il grafo, non ci si fa.
+
+queste azioni possono avere dei costi, in generale questi archi non
+hanno sempre tutti lo stesso costo.
+
+mettere un certo componente in un certo posto, guidare per una strada
+con più o meno traffico, più o meno lunga, costi di certe decisioni.
+questo tragitto ha più benzina, questo tragitto ha meno pedaggio...
+In generale le decisioni hanno per l'appunto un costo.
+
+=STEP_COST=, il costo di un passo, il libro lo scrive come funzione di
+=STEP_COST(stato_iniziale,azione,stato_arrivo_dopo_l'azione)=
+questo perchè boh, possono esserci più azioni che portano dallo stesso
+stato allo stesso stato.
+
+Vi è una famiglia grande di algoritmi di ricerca
+come input abbiamo da dove vado, dove voglio arrivare, i costi di...
+l'output è una sequenza di azioni, vedi ieri
+
+Cost(s_0, a_1, a_2, ..., a_T) = \sum_(t-1)^T step cost(s_(t-1), a_t, s_t)
+con varii abusi si può arrivare a casi determinsistici partendo da
+situazioni più aleatorie (metti valori attesi che cazzo devo dirti)
+tra tutte le sequenze che ti fanno S_T \in G
+
+Se hai tutti gli archi con lo stesso peso allora arrivi
+tranquillamente con una bfs, il cammino minimo infatti è quello che ha
+il minimo numero di azioni, quindi il minimo numero di archi, quindi
+bfs.
+Minimizzare rispetto a tutti i cammini e minimizzare rispetto a T è la
+stessa cosa, visto che \sum^T cost = T \times cost, quindi.
+
+La bfs mantiene una struttura dati ausiliaria, una sequenza che viene
+ordinata in ordine di arrivo, =queue=
+In Dykstra la tieni ordinata per peso
+Nella dfs tieni la sequenza ordinata che è lo stack, usi il call.
+
+Questi tre algoritmi sono la stessa cosa da questo punto di vista
+
+fai uno pseudocodiche che
+ - gli passi FIFO \to BFS
+ - gli passi LIFO \to DFS
+ - gli passi coda con priorità \to Dykstra
+
+In bfs c'hai i nodi nella coda, qui c'hai gli stati nella coda, abbè
+
+questa struttura dati ausiliaria nell'ambito di AI o che cazzo è si
+chiama *FRONTNIERA*, come nome variabilie sarà =q= perchè in generale
+è una coda ordinata in qualche modo, possiamo scriverla come struttura
+astratta con operazioni:
+ - =q.vuota?()=
+   (se diventa vuota e non ho trovato il goal, vuol dire che non ho
+   trovato una soluzione)
+
+definiamo un attimo la *COMPLETEZZA* (almeno in questo ambito)
+significa che l'algoritmo è capace di trovare la soluzione quando
+esiste, un algoritmo completo se c'è la soluzione sa trovarla in
+/tempo finito/
+
+Un altro concetto importante, anche questo parola chiave,
+l'*ESPANSIONE* del nodo, la generazione dei figli/ successori/ boh del
+nodo.
+Implicitamente c'è sempre un orientamento, il grafo è sempre orientato
+verso gli stati futuri.
+Qui la lista di adiacenza non è in memoria, qui i figli li stai
+generando, li stai allocando te in memoria, e chi te lo dice che non
+ti ammazza la ram, e lo swap, e il computer, e il cloud non ti fotte
+con il budget per le chiamate alle API, e poi muori.
+
+Una delle caratteristiche delle AI è che ci sono un sacco di problemi
+NP completi
+** Definizione di problema NP completo
+Molti problemi 
+Problemi di vincoli
+Soddisfacibilità booleana
+...
+N \to non deterministico
+P \to polinomial
+caratteristica del problema, non dell'algoritmo
+NP completo quando boh macchina di turing non deterministica.
+risolvibili in tempo polinomiale da una macchina non deterministica.
+
+Una macchina non deterministica è una macchina /magica/ che dato uno
+stato del calcolo può procedere in tutti i modi in cui può andare
+avanti come se avesse infiniti processori, infiniti processori.
+
+Dato uno stato va a tutti gli stati a cui può arrivare
+
+l'evoluzine degli stati, la funzione di transizione va a set.
+
+Una macchina di truing non deterministica è tipo questo ma per le
+macchine di Turing e non per gli automi
+
+Definizione alternativa:
+Ti do una soluzine e in tempo polinomiale devi poter verificare che
+quella sia una soluzione corretta del problema
+(puoi verificare in tempo polinomiale con una macchina deterministica)
+
+La classe di problemi P sono tutti quei problemi per cui puoi
+risolvere in tempo polinomiale il problema con una macchina
+deterministica.
+
+Prendiamo come congettura P \neq NP
+
+In soldoni, gli algoritmi risolutivi hanno una complessita enorme
+
+I due limitoni dell'informatica sono
+ - Non decibilità (matematica, non puoi)
+ - Non trattabilità (ingegneria, turing tar pit)
+   
+** Albero di ricerca
+L'albero di ricerca è una struttura concettuale, anche se S \neq \infty c'hai
+l'albero \infty.
+I nodi dell'albero sono cammini (quando si disegna ci si mette
+l'ultimo del cammino)
+la radice è il cammino vuoto che finisce con s_0, poi prendete per ogni
+nodo l'ultimo nodo del cammino, l'espansione sono tutti i possiblii
+successori, tutte le possibili azioni.
+Ogni nodo "contiene il cammino dalla radice a quel nodo"
+
+Memorizzarlo è da coglioni, ma tenerlo come concetto non è malissimo
+
+Il branching factor si definisce come \max_s |Actions(s)|
+Si fa il caso peggiore per fare l'analisi con l'O grande
+quindi la ricerca a profondità =d= con un branching factor di =b= ha
+una complessità che ti arriva a O(b^d)
+
+** Elenco dei metodi della frontiera
+ - =q.isEmpty()=
+ - =q.pop()=
+ - =q.insert(elemento)=
+è una struttura astratta, una classe puramente virtuale, un'interface,
+boh.
+tutti gli algoritmi fanno ste cose, con quali politiche dipende
+dall'algoritmo.
+
+** Struttura dati per i nodi
+I nodi sono i nodi dell'albero di ricerca
+hanno questi attributi
+ - =n.stato=
+tra due nodi c'è un solo cammino, è un albero, se memorizzo il padre
+mi basta quello per ricorstruirlo efficientemente
+ - =n.padre=
+inoltre per ricostruire la sequenza di azioni devo sapere con quale
+azione sono arrivato lì
+ - =n.azione=
+poi il path cost, quanto ho pagato per arrivare lì (costo a partire
+dalla radice, non il costo di =n.azione=)
+ - =n.pat_hcost=
+
+** Pseudo codice
+=f= detta funzione di valutazione, serve per ordinare la coda
+=q= viene ordianata per =f=
+Vogliamo essere generici quanto la merda per andare poi di
+/euristica/, la genericità di tenere questa =f= arbitraria sarà di
+aiuto /poi/
+#+begin_src python
+  def Best_First(problem f):
+    n = Node(problem.initial) #punto di partenza
+    fronteer = Queue(f) #coda ordinata per f
+    froteer.insert(n)
+    while not fronteer.empty():
+      n = frotneer.pop()
+      if problem.GoalTest(n)
+        return n
+        for c in problem.expand(n): #loop su tutti i possibli figli di n
+          s = c,state
+          fronteer.insert(s)
+  return Failure
+#+end_src
+
+in questo caso expand può ritornare un set o un generatore, è quella
+che produce il set di tutti gli s : s=Result(s_boh, a) con a \in
+Actions(s).
+
+*** Domanda, come si svuota la frontiera se sto attraversando all'infinito? o cazz'ha detto
+introduce l'argomento della prossima lezione
+posso fare un sacco di doppioni, posso avere un sacco di nodi in
+frontiera con la stessa =n.stato=, allora boh
+

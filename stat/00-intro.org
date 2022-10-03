@@ -1,0 +1,149 @@
+* Statistica
+Sensibilità, un senso di cosa sia la statistica
+La statistica non è una scienta assiomatizzata, se c'è qualcosa su cui
+abbiamo del consenso sono i problemi, devo capire la soluzoine a x.
+Come arrivare a risolvere x, quale sia la soluzoine di x, che cazzo ne
+so.
+
+Ci sono 2 scuole parecchio diverse, capire questa dicotomia è
+importante a capire "come sta ragionanado questo?" "che cazzo sto
+leggendo".
+- Statistica Frequenatista
+- Statistica Bayesiana
+
+La statistica viene spesso usata per validare una tesi precostituita,
+puoi determinare un corso di strumenti usati o metodi usati o che so
+che e ti porta a "oh guarda! Quello che volevo uscisse!".
+
+Già manipolando i dati ottieni risultati diversi, se tu stai facendo
+un'analisi, provando a capire se questa variabile è rilevante...
+
+Quando state facendo statistica, fate finta di starlo facendo per voi,
+voi non vi fate fregare da voi stessi, uso gli strumenti che penso
+siano migliori, se mi dico scemenze da solo ne pagherò le conseguenze.
+
+* Organizzazione del corso
+Orario un pochino di merda, lunedì alle 5 alle 7 e venerdì dalle 2
+alle 5. Qualcos'altro, non lo so.
+
+L'esame è scritto, dopo lo scritto
+dopo la correzione vi è un ricevimento generale
+
+Consigliato il fare un formulario, in modo da non avere l'ansia del
+"non so la formula"
+
+Per quanto riguarda l'atteggiamento siete pregati di intervenire
+quando avete domande.
+
+* Perchè R
+*LIBEROO*
+R è fatto apposta
+Tutta una serie di funzioni molto utili per statistica
+Tutti gli statistici che fanno qualcosa la mettono dentro un pacchetto
+di R, bellissimo.
+
+Primo appello del 20 Dicembre
+
+* Libri di testo
+Sheldon M. Ross Probabilità e Statistica per l'ingegneria e le scienze
+(libro non male, corretto)
+
+Quest'anno Alagresti, Kateri
+Fondamenti di statistica per data Scientists
+(originale inglese, vedi per piratarlo)
+
+RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+
+* Outiline corse
+- Statistica descrittiva
+- Calcolo delle probabilità
+- Variabili aleatorie
+- Modelli per variabili aleatorie discrete e continue
+- Distribuzione delle statistiche campionarie (frequentisti)
+- Inferenza Bayesiana (bayesiani)
+- Stima parametrica, stimatori per massima verosimiglianza, intervalli
+  di confidenza
+- Verifica delle ipotesi
+- Regressione e Analisi della varianza
+
+"Cosa posso dire, circa \lambda"
+"Regressione, ipotesi su analisi con variabili di contorno,
+specializzo inferenza su sottinsiemi, stima di altezza dato il sesso e
+la partecipazione a tornei di basket"
+
+* Q'est que c'est?
+La statistica si occupa di /apprendere e trarre informazioni/ dai dati
+tramite
+1. Raccolta dei dati (campionamento, disegno degli esperimenti)
+2. Statistica descrittiva (sintesi e descrizione di quanto osservato
+   in un /campione/)
+3. Statistica inferenziale (estrazione di informazione generali su
+   intere popolazoini a partire da un /campione/)
+
+La statistica da informazioni e cerca informazioni su variabili non
+osservabili tramite robe
+
+L'informazoine dipende dalla valutazione di probabilità di stime e
+scazzi che do intorno al sì o no,
+Un ballo del coglione intorno al booleano.
+Come si focalizzano le possiblità intorno ai due stati
+50/50 non ho troppe informzioni
+99.9/0.1 ho abbastanza informazione
+
+la misura che ti da l'entropia è la misura dell'incertezza
+
+La statistica trasforma i dati in incertezze (Popper do' cazzo sei?)
+
+* Q'est que scazza
+1. Raccolta dati
+   - attributi non del tutto imparziali nell'osservazione (chiedi al
+     telefono, hanno un telefono, per mail? idem)
+   - il tizio che misura fa di testa sua, fa la cosa che gli fa più
+     comodo fare
+
+Fino a pochi anni fa il gold standard era randomizzare la raccolta dei
+dati, la raccolta dati non è gestita dall'individuo ma è governata da
+numeri tirati a cazzo, o da enti tirati a cazzo che tirano a cazzo.
+
+Fino alla fine degli anni 50 il gold standard era questo, più o meno
+lo è ancora, ma negli ultimi anni vi sono stati 2 premi nobel da tizi
+che si sono occupati di /inferenza causale/ sulle relazioni causali
+tra variabili e lavorano con dati osservazionali e non su una
+pianificazione, ci sono molti motivi etici che non permettono di fare
+randomizzazione.
+Metti che stai studiando probabilità di morte di fumatori, dai a tot
+persone a caso 20 sigarette al giorno eh...
+Magari studia gente che ne fuma già 20.
+Ma ci sono influenze sulla longevità se sei già arrivato a fumare 20
+sigarette al giorno, eh...
+
+La statistica si nutre dell'incertezza
+
+* Alcuni concetti base
+ - *Unità statstica*: che cazzo sto osservando (persone, chip, università...)
+ - *Popolazoine*: insieme /completo/ di unità statistiche di nostro interesse
+ - *Campione*: sottinsieme della popolazione
+ - *Variabili*: carattersitiche di interesse dell'unità
+ - *Dati*: valori assunti dalle variabili
+** Tipi di dati
+ - Categorici
+   - Ordinali (ordinabili, posso ordinare le posizioni di lavoro, alto
+     basso, latidudini)
+   - Nominali (non posso ordinare i colori, posso provarci ma non
+     sarebbe molto utile)
+   - Booleani (facilmente trasformablili in numerici facendo t->1 f->0)
+ - Numerici
+   - Continui
+   - Discreti
+
+N/A, -, i mitici missing(no).
+Che ci fo coi missing?
+Posso sostituirli con la media, mettere una categoria a parte,
+mandarle a fanculo con l'intera riga
+Stima dei missing, /Inferentia boiiii/
+
+Una volta ottenuta la tabella, vedere come sono distribuiti i dati.
+
+Quando rappresento a pezzettoni, classi, cazzo è una distribuzione di
+variabili.
+Facciamo con un po' di metodo per che cazzo significa sta cosa

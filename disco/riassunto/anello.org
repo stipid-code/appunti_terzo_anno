@@ -1,0 +1,53 @@
+* Definzione
+*** Nota storica, perchè esiste questa cosa?
+L'anello è stato introdotto per fare da denominatore comune a bene o
+male ogni contesto in cui puoi fare somma e prodotto di qualcosa, cosa
+comunque abbastanza utile quando sei nel 1900 e la gente sta provando
+ad assiomatizzare e logicizzare ogni aspetto della matematica mai
+concepito da essere vivente.
+
+Quindi qualche decennio fa il genio di turno ha visto che c'erano
+parecchie cose in comune tra interi, matrici, reali, complessi,
+razionali e quant'altro, e ha deciso di definire questa =interface=
+comune.
+
+** Definzione a grandi linee
+Un anello è un insieme per cui abbiamo definito le basi basi per
+poterci fare calcoli, in questo caso
+ - Una somma (la sottrazione fai la somma con i negativi)
+ - Un prodotto (la divisione fai il prodotto con l'inverso, se esiste)
+ - Uno $0$ che si comporta da $0$
+   (neutro per la somma e il prodotto fa $0$)
+ - Un $1$ che si comporta da $1$ (neutro per il prodotto)
+ - Numeri positivi e negativi (i negativi servono per fare la sottrazione)
+
+Per mettere un minimo di arrosto sotto a sto fumo prendiamo l'insieme
+degli interi $\mathbb{Z}$, tutto quello che abbiamo fatto con gli
+interi e che sappiamo sugli interi ha come basi:
+ - Il fatto che lo $0$ e l'$1$ si comportano da $0$ e $1$
+ - Il fatto che abbiamo una somma con certe proprietà
+ - Il fatto che abbiamo un prodotto con certe proprietà
+ - Il fatto che se abbiamo $x$ allora abbiamo anche $-x$ e ci possiamo
+   fare le somme algebriche
+
+** Definizione più rigorosa
+Un insieme
+\[(R,0,+,1,\cdot)\]
+è un anello quando
+ - $0,1 \in R$
+ - la somma $+$ è un operatore binario
+   [fn::vuole dire solo che la somma è definita solo tra due elementi,
+   tanto quando sommi si fa la somma si fa comunque tra 2 addendi alla
+   volta, non cambia niente] 
+   da $R\times R$[fn::che ha in ingresso 2 elementi dell'anello]
+   in $R$ che[fn::che ha come uscita un elemento dell'anello]
+   - è commutativo ($a+b = b+a$ quando $a,b \in R$)
+   - è associativo ($a+(b+c) = (a+b)+c$ quando $a,b,c \in R$)
+ - il prodotto $\cdot$ è un operatore binario da $R\timesR$ in $R$ che
+   - è associativo [fn::la proprietà commutativa del prodotto non vale
+     di default perchè altrimenti le matrici si arrabbiano, gli anelli
+     per cui la moltiplicazione è commutativa ($\mathbb{Z},
+     \mathbb{R}, \mathbb{C}, \mathbb{Q}...$) si dicono /anelli
+     commutativi/ e faremo bene o male solo quelli]
+ - $0$ è l'elemento neutro della somma ($a+0 = a \forall a \in R)
+ - $1$ è l'elemento neutro del prodotto ($a \cdot 1 = a \forall a \in R)
