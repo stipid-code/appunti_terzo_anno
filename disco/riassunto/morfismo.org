@@ -1,0 +1,20 @@
+* Definizione
+Un morfismo di anello è una funzione tra due anelli
+$\varphi : R \to S$ con la particolarità che tutte le "relazioni
+anellose" tra   $a,\ b,\ tizio,\ caio,\ sempronio,\text{et\ al}\ \in\ R$
+restano tali per $\varphi(a),\ \varphi(b),\
+\varphi(tizio),\ \varphi(caio),\ \varphi(sempronio),
+\text{et}\ \varphi(\text{al})\ \in\ S$
+
+per definirlo in modo un po' più rigoroso diciamo che
+  - $\varphi(\cdot)$ rispetta l'unità ($\varphi(1_R) = 1_S$)
+  - $\varphi(\cdot)$ rispetta la somma ($\varphi(a + _R b) = \varphi(a) + _S \varphi(b)$)
+  - $\varphi(\cdot)$ rispetta il prodotto ($\varphi(a \cdot _R b) = \varphi(a) \cdot _S \varphi(b)$)
+
+tutto quello che posso dire per $m,n \in \mathbb{Z}$ rispetto a $\mathbb{Z}$, ad esempio: 
+  - posso dirlo per $\frac{m}{1}, \frac{n}{1}$ rispetto a $\mathbb{Q}$
+  - posso dirlo per le matrici $M = m \times I, N = n \times I$
+    rispetto alle matrici quadrate in $\mathbb{R}^{boh \times boh}$ 
+  - posso dirlo per i polinomii costanti $m(x) = m, n(x) = n$ rispetto
+    all'insieme dei polinomii in $x$ 
+  - etc...
