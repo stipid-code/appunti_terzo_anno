@@ -1,0 +1,41 @@
+* Certi modi per sintetizzare una roba
+ - media aritmetica
+  \[\overline{x} = \frac{1}{n}\sum_{i=1}^{n} x_i\]
+   - è compresa tra il valore minimo e valore
+   - /baricentro/ della distribuzione
+     \[\sum_{i=1}^{n} x_i = \sum_{1=i}^{n} media\]
+   - somma degli scarti della media è /nulla/
+     \[\sum_{i=1}^{n} x_i-media = 0 \text{ (dimostra con sopra)}\]
+   - minimizza lo scarto quadratico
+     \[(\min_{\mathbb{R}} f(a) = \sum_{i=1}^{n}(x_i - a)^2) = media\]
+ - mediana
+   dividiere una successione ordinata di osservazione (che è quindi
+   ordinabile) di osservazoini.
+   (la mediana non è osservabile in carattere qualitativo)
+   la mediana è il punto in mezzo alla sequenza ordinata.
+   In caso te ne capitino 2 in mezzo fai una mezza schifezza e fai la
+   media tra i due
+ - moda (numero uscito più spesso)
+   indice calcolabile sempre, non mi interessa ordinare, mi interessa
+   solo la qualità per cui ho la massima frequenza.
+
+qual'è l'incertezza rispetto al valore minimo e massimo della
+variabile
+il valore minimo diventa il minimo rispetto al quale una variabile
+aletoria del cazzo è del cazzo.
+
+vedo clusterini o divisioni si può notare una certa eterogeneità,
+quidni ci sono variabili importanti non osservate dietro ai campioni osservati.
+
+* Scelta indice di dimensione
+\[\sum_i^n f(x_i, m) \forall i \]
+aggrego sta cosa per ottenere una certa misura che c'entra con boh.
+una certa pedita di dettaglio per scelta di indice di sintesi
+$f$ è una funzione aggregatrice.
+
+tipi di funzione aggregatrice
+ 1. x_i == m? \to non m'interessa un cazza se ci va vicino, deve beccarlo
+ 2. $\lvert x_i - m \rvert$ \to m'interessa quanto ci va vicino
+ 3. $(x_i - m)^2$ \to m'interessa /molto/ quanto ci va vicino
+
+la media minimizza 3
